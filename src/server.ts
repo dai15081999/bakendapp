@@ -19,7 +19,7 @@ const httpServer = createServer(app);
 
 const io = new Server(httpServer,{
   cors: {
-    origin: "https://demoappx.vercel.app/",
+    origin: "http://demoappx.vercel.app/",
   },
 });
 
@@ -30,7 +30,7 @@ dotenv.config()
 // app.use(cookieParser());
 app.use(
   cors({
-    origin: 'https://demoappx.vercel.app/'
+    origin: 'http://demoappx.vercel.app/'
   }),
 );
 app.use(express.json({ limit: '8mb' }));
